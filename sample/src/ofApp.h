@@ -2,8 +2,14 @@
 
 #include "ofMain.h"
 #include "Particle.h"
+#include "ofxOpenNI.h"
 
 class ofApp : public ofBaseApp{
+private:
+    ofxOpenNI kinect;
+    
+    
+
 
 	public:
 		void setup();
@@ -22,6 +28,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
+        //ofPoint handPos;
+        ofPoint handPos;
 		vector<Particle> Particles;
 		ofImage Background;
 		ofVec2f MousePos[2];
@@ -29,4 +37,7 @@ class ofApp : public ofBaseApp{
 		ofVec4f limit;
 		int mode;
 		int timeCount = 0;
+    
+     
+
 };
