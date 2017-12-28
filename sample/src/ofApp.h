@@ -28,16 +28,16 @@ private:
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-        //ofPoint handPos;
-        ofPoint handPos;
+       
+    int numHands;
 		vector<Particle> Particles;
 		ofImage Background;
 		ofVec2f MousePos[2];
 		ofVec2f pos;
+    ofVec2f center;
+    ofVec2f handPos[4];
 		ofVec4f limit;
 		int mode;
 		int timeCount = 0;
-    
-     
-
+   
 };

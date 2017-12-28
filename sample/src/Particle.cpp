@@ -15,8 +15,8 @@ void Particle::setup(ofVec2f _pos,ofVec4f _limit,int _mode)
 	}
 	else if (_mode == 1) {
 		pos = _pos;
-		center.x = ofGetWidth() / 2;
-		center.y = ofGetHeight() / 2;
+		center.x = _limit.w;
+		center.y = _limit.x;
 		radious.x = 200;
 		//radious.y = radious.x / 2;
 		gap = pos - center;
@@ -99,8 +99,8 @@ float Particle::getDegree(float x, float y) {
 
 	return degree;
 }
-
-void Particle::setMode(int _mode) {
-	ofVec4f Null = { 0,0,0,0 };
-	setup(pos,Null , _mode);
-}
+/*
+void Particle::setMode(int _mode,ofVec2f _center) {
+	ofVec4f center = { _center.x,_center.y,0,0 };
+	setup(pos,center , _mode);
+}*/

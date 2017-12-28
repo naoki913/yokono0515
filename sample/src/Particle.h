@@ -15,7 +15,7 @@ public:
 	void update(int _mode);
 	void draw(int _mode);
 	float getDegree(float x, float y);
-	void setMode(int _mode);
+	//void setMode(int _mode,ofVec2f center);
 
 	//int angle;
 	ofImage img;
